@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(buoy)
+project(opencv-for-catkin-sample)
 
 ## Find catkin macros and libraries
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
@@ -159,9 +159,9 @@ include_directories(
 #   target_link_libraries(${PROJECT_NAME}-test ${PROJECT_NAME})
 # endif()
 
-add_executable(buoycv src/buoycv.cpp)
+add_executable(test src/test.cpp)
 ## Add folders to be run by python nosetests
 # catkin_add_nosetests(test)
 find_package(OpenCV)
 include_directories(${OpenCV_INCLUDE_DIRS})
-target_link_libraries(buoycv ${OpenCV_LIBRARIES})
+target_link_libraries(test ${OpenCV_LIBRARIES})
